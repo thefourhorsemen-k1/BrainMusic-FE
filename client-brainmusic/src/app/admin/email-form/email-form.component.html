@@ -1,0 +1,31 @@
+
+<form class="container" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+  <h1>Reply Feedback</h1>
+  <div class="title-box">
+    <label><i class="fas fa-user"></i><span>Subject</span></label>
+    <input type="text" placeholder="Enter Subject" class="col-md-12" formControlName="subject">
+    <div class="alert p-1" role="alert"
+         *ngIf="emailForm.get('subject').invalid && emailForm.get('subject').touched">
+      Invalid Name!
+    </div>
+  </div>
+  <div class="title-box">
+    <label><i class="fas fa-envelope"></i><span>Email</span></label>
+    <input type="email" placeholder="Enter Email" class="col-md-12" formControlName="email">
+    <div class="alert p-1" role="alert"
+         *ngIf="emailForm.get('email').invalid && emailForm.get('email').touched">
+      Invalid Email!
+    </div>
+  </div>
+  <div class="title-box">
+    <label><i class="fas fa-comment"></i><span>Message</span></label>
+    <textarea type="text" placeholder="Type Your Message" class="col-md-12" wrap="soft" rows="3"
+              formControlName="feedback"></textarea>
+    <div class="alert p-1" role="alert"
+         *ngIf="emailForm.get('feedback').invalid && emailForm.get('feedback').touched">
+      Invalid Feedback!
+    </div>
+    <button type="submit" class="btn btn-primary col-md-12" [disabled]="emailForm.status==='INVALID'">Send Email
+    </button>
+  </div>
+</form>

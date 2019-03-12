@@ -1,0 +1,94 @@
+<app-alert></app-alert>
+<div class="register-background">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset=md-1">
+        <div class="row">
+
+          <div class="col-md-5 register-left">
+            <img src="assets/background/logo.png">
+            <h3>Join us</h3>
+            <p>If music could help me feel a little hope and a little less pain, maybe it could do the some for
+              others</p>
+            <button type="button" class="btn btn-primary">About us</button>
+          </div>
+
+          <div class="col-md-7 register-right">
+            <h2>Register Here</h2>
+            <form class="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" formControlName="username">
+                <div class="alert p-1" role="alert"
+                     *ngIf="registerForm.get('username').invalid && registerForm.get('username').touched">
+                  <span *ngIf="registerForm.get('username').hasError('required')">User name is required</span>
+                  <span *ngIf="registerForm.get('username').hasError('pattern')">User name must contain at least 3 letters and numbers </span>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                <div class="alert p-1" role="alert"
+                     *ngIf="registerForm.get('password').touched && registerForm.get('password').invalid">
+                  <span *ngIf="registerForm.get('password').hasError('required')">Password is required</span>
+                  <span *ngIf="registerForm.get('password').hasError('pattern')">Password must contain at least 6 letters, uppercase and lowercase</span>
+                </div>
+
+              </div>
+
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Confirm Password"
+                       formControlName="confirmPassword">
+                <div class="alert p-1" role="alert"
+                     *ngIf="registerForm.get('confirmPassword').errors && registerForm.get('confirmPassword').errors.ConfirmPassword
+&& registerForm.get('confirmPassword').touched">
+                  Password is not match
+                </div>
+              </div>
+
+              <fieldset class="form-group">
+                <div class="row">
+                  <div class="form-check form-check-inline col-form-label pl-3 pt-0">
+                    <input class="form-check-input" type="radio" value="1" formControlName="gender">
+                    <label class="form-check-label pt-1">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline col-form-label pt-0">
+                    <input class="form-check-input" type="radio" value="2" formControlName="gender">
+                    <label class="form-check-label pt-1">Female</label>
+                  </div>
+                  <div class="form-check form-check-inline col-form-label pt-0">
+                    <input class="form-check-input" type="radio" value="3" formControlName="gender">
+                    <label class="form-check-label pt-1">Other</label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" formControlName="email">
+                <div class="alert p-1" role="alert"
+                     *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">
+                  Invalid Email!
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Phone" formControlName="phonenumber">
+                <div class="alert p-1" role="alert"
+                     *ngIf="registerForm.get('phonenumber').invalid && registerForm.get('phonenumber').touched">
+                  <span *ngIf="registerForm.get('phonenumber').hasError('required')">Phone is required</span>
+                  <span
+                    *ngIf="registerForm.get('phonenumber').hasError('pattern')">Phone must start with 0 followed by 9 digits.</span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" [disabled]="registerForm.status==='INVALID'">Register
+              </button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

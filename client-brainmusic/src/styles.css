@@ -1,0 +1,18 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+.register-background {
+  height: 100%;
+  background: linear-gradient(to right, #ff5722, #ff9800);
+}
+
+.navbar-brand {
+  background: url("assets/background/logo.png") no-repeat 50% 50%;
+  background-size: 80px 78px;
+  width: 100px;
+  height: 60px;
+  margin: 0 !important;
+  padding: 0 !important;
+}

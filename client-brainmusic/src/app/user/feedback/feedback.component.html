@@ -1,0 +1,25 @@
+<div class="container">
+    <form class="form" [formGroup]="feedbackForm" (ngSubmit)="onSend()">
+      <h2>CONTACT US</h2>
+      <p type="Name:"><input class="name" placeholder="Write your name here.." formControlName="name"></p>
+      <span class="alert p-1" role="alert"
+            *ngIf="feedbackForm.get('name').invalid && feedbackForm.get('name').touched">
+        Name is required!
+      </span>
+      <p type="Email:">
+        <input class="email" placeholder="Let us know how to contact you back.." formControlName="email">
+      </p>
+      <span class="alert p-1" role="alert"
+            *ngIf="feedbackForm.get('email').invalid && feedbackForm.get('email').touched">
+        Invalid Email!
+      </span>
+      <p type="Message:"><textarea class="feedback" placeholder="What would you like to tell us.."
+                                   formControlName="feedback"></textarea>
+      </p>
+      <button>Send Message</button>
+      <div class="info">
+        <span class="fas fa-phone"></span>+84 - 123456789
+        <span class="far fa-envelope"></span> fourhorsemen987@gmail.com
+      </div>
+    </form>
+  </div>

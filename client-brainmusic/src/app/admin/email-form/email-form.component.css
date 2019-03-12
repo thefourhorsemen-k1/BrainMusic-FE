@@ -1,0 +1,48 @@
+/*.container {*/
+  /*box-sizing: border-box;*/
+  /*border: #000 solid 1px;*/
+  /*margin-top: 10%;*/
+  /*margin-bottom: 10%;*/
+  /*border-radius: 10px;*/
+  /*background: rgba(225, 225, 225, 0.2);*/
+/*}*/
+
+/*.container h1 {*/
+  /*text-align: center;*/
+  /*color: #000;*/
+  /*padding: 25px 0;*/
+/*}*/
+
+/*.container .title-box {*/
+  /*margin: 15px 15px;*/
+/*}*/
+
+/*.container .title-box .fas {*/
+  /*padding-right: 5px;*/
+  /*font-size: 14px;*/
+/*}*/
+
+/*.container .title-box span {*/
+  /*font-weight: bold;*/
+  /*font-size: 14px;*/
+/*}*/
+
+/*.container .title-box input, .container .title-box textarea {*/
+  /*padding: 5px 15px;*/
+  /*outline: none;*/
+  /*border: 1px solid #e5ebeb;*/
+  /*border-radius: 5px;*/
+  /*font-size: 14px;*/
+/*}*/
+
+/*.container .title-box input:focus, .container .title-box textarea:focus {*/
+  /*box-shadow: 0 0 0 1pt #82bcff;*/
+/*}*/
+
+/*.container .title-box .btn {*/
+  /*border: none;*/
+  /*color: #fff;*/
+  /*margin: 10px 0;*/
+/*}*/
+
+

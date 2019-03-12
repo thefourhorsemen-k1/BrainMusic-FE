@@ -1,0 +1,35 @@
+<div class="background">
+  <video autoplay loop oncanplay="this.muted=true">
+    <source src="/assets/video/background.mp4" type="video/mp4">
+  </video>
+  <div class="content">
+    <h1>Leonardo da Vinci</h1>
+    <p>Dù chỉ nắm vững một kiến thức nào đó, cũng đều có ích cho trí óc, nó sẽ ném đi những thứ vô dụng nhưng giữ lại
+      những thứ có ích.</p>
+  </div>
+</div>
+<div class='player'>
+  <audio src= '{{service.formData.songUrl}}' required></audio>
+  <img src='{{service.formData.imageUrl}}'/>
+  <div class='info'>
+    <div class='name'>{{service.formData.name}}</div>
+  </div>
+  <div class='btns'>
+    <div class="iconfont play-pause icon-play"></div>
+  </div>
+  <div class='progress'>
+
+  </div>
+</div>
+<table class="table-bordered table table-hover">
+  <thead>
+  <tr>
+    <td>Song list</td>
+  </tr>
+  </thead>
+  <tr class="listSong" *ngFor="let song of service.list">
+
+    <td (click)="populateForm(song)">{{song.name}}</td>
+  </tr>
+
+</table>
