@@ -25,11 +25,13 @@
 <span>
   <button mat-button (click)="onChangeSongs('EDM')">EDM</button>
   </span>
-<mat-nav-list *ngFor="let track of list">
-  <a mat-list-item
-     [class.selected]="track === currentTrack"
-     (click)="setTrack(track)">{{track.name}}</a>
-</mat-nav-list>
+
+
+<!--<mat-nav-list *ngFor="let track of list">-->
+  <!--<a mat-list-item-->
+     <!--[class.selected]="track === currentTrack"-->
+     <!--(click)="setTrack(track)">{{track.name}}</a>-->
+<!--</mat-nav-list>-->
 
 <p>Audioplayer</p>
 Playing: {{currentTrack.name}}
@@ -45,7 +47,8 @@ Category: {{currentTrack.category}}
     (change)="setVolume($event.value)">
   </mat-slider>
   Progress:
-  <mat-slider
+
+  <mat-slider id="currentTime"
     min="0"
     max="{{audio.duration}}"
     step="0.001"
@@ -59,5 +62,8 @@ Category: {{currentTrack.category}}
   <button mat-button id="stop" (click)="stopTrack()">Stop</button>
   <button mat-button id="next" (click)="nextTrack()">Next</button>
   <button mat-button id="previous" (click)="previousTrack()">Previous</button>
+  <button mat-button id="25mins" (click)="setTime(1500000)">25mins</button>
+  <button mat-button id="5mins" (click)="setTime(300000)">5 mins</button>
+
 </span>
 
