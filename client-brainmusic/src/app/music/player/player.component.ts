@@ -13,11 +13,11 @@ declare function runjs(): any;
 export class PlayerComponent implements OnInit {
 
   formData: Music;
+  list: Music[];
 
   constructor(
     private service: MusiclistService
   ) {
-    this.currentTrack = this.track[this.trackIndex];
     this.trackIndex = 0;
 
   }
@@ -27,7 +27,7 @@ export class PlayerComponent implements OnInit {
   private trackIndex = 0;
   private track: Music[] = this.service.list;
 
-  private currentTrack: Music;
+  private currentTrack: Music
   panelOpenState = false;
 
   playTrack() {
@@ -50,10 +50,10 @@ export class PlayerComponent implements OnInit {
   nextTrack() {
     this.stopTrack();
     this.trackIndex++;
-    if (this.trackIndex > this.track.length) {
+    if (this.trackIndex > this.list.length) {
       this.trackIndex = 0;
     }
-    this.currentTrack = this.track[this.trackIndex];
+    this.currentTrack = this.list[this.trackIndex];
     this.audio.src = this.currentTrack.songUrl;
     this.audio.load();
     this.playTrack();
@@ -63,9 +63,9 @@ export class PlayerComponent implements OnInit {
     this.stopTrack();
     this.trackIndex--;
     if (this.trackIndex < 0) {
-      this.trackIndex = this.track.length - 1;
+      this.trackIndex = this.list.length - 1;
     }
-    this.currentTrack = this.track[this.trackIndex];
+    this.currentTrack = this.list[this.trackIndex];
     this.audio.src = this.currentTrack.songUrl;
     this.audio.load();
     this.playTrack();
@@ -89,14 +89,16 @@ export class PlayerComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.list = this.track;
     this.audio = new Audio();
+    this.currentTrack = this.list[this.trackIndex];
 
-    this.audio.src = this.currentTrack.songUrl;
+    this.audio.src = this.list[0].songUrl;
 
     // @ts-ignore
     // this.resetForm()
-    console.log(this.track)
+    console.log("track: " + this.track)
+    console.log("list: " + this.list)
   }
 
 
@@ -114,9 +116,16 @@ export class PlayerComponent implements OnInit {
   };
 
   onChangeSongs(category: string) {
-    this.service.getCateSong(category).subscribe(res => {
-        this.service.refreshList();
-      })
+    this.list = [];
+    for (let i = 0; i < this.track.length; i++) {
+      if (this.track[i].category == category) {
+        this.list.push(this.track[i]);
+      }
+
+    }
+    ;
+    this.audio.src = this.list[0].songUrl;
+    console.log(this.list)
   };
 
 

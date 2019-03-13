@@ -10,6 +10,24 @@
 </div>
 
 
+
+<span>
+  <button mat-button  (click)="onChangeSongs('Relax')">Relax</button>
+  </span>
+
+<span>
+  <button mat-button  (click)="onChangeSongs('ChillOut')">Chill Out</button>
+  </span>
+
+<span>
+  <button mat-button  (click)="onChangeSongs('EDM')">EDM</button>
+  </span>
+<mat-nav-list *ngFor="let track of list">
+  <a mat-list-item
+     [class.selected]="track === currentTrack"
+     (click)="setTrack(track)">{{track.name}}</a>
+</mat-nav-list>
+
 <p>Audioplayer</p>
 Playing: {{currentTrack.name}}
 Category: {{currentTrack.category}}
@@ -21,7 +39,7 @@ Category: {{currentTrack.category}}
     max="1"
     step="0.001"
     value="{{audio.volume}}"
-    (change)="__setVolume($event.value)">
+    (change)="setVolume($event.value)">
   </mat-slider>
   Progress:
   <mat-slider
