@@ -153,11 +153,7 @@
   content: "\e61c";
 }
 #currentTime {
-  font-family: monospace;
-  font-size: 14px;
-  position: absolute;
-  right: 5%;
-  top: 5%;
+  width: 100%;
 }
 .background {
   position: relative;

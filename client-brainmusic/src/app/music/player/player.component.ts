@@ -28,13 +28,25 @@ export class PlayerComponent implements OnInit {
   private track: Music[] = this.service.list;
 
   private currentTrack: Music
-  panelOpenState = false;
 
   playTrack() {
     this.audio.play();
     this.playing = true;
-
+    setTimeout(() => {
+      //Them ham` hien thi vao day tuy ae nhe
+      alert("Ban hay nghi ngoi 5 phut truoc khi nghe tiep")
+      console.log("timeout")
+    }, 1500000);
+    console.log(this.audio.duration)
+    // setTimeout(
+    //   () => {
+    //     //Them ham` hien thi vao day tuy ae nhe
+    //     this.nextTrack()
+    //     console.log("timeout")
+    //   }, 5000
+    // )
   }
+
 
   pauseTrack() {
     this.audio.pause();
@@ -52,6 +64,7 @@ export class PlayerComponent implements OnInit {
     this.trackIndex++;
     if (this.trackIndex > this.list.length) {
       this.trackIndex = 0;
+      this.playTrack();
     }
     this.currentTrack = this.list[this.trackIndex];
     this.audio.src = this.currentTrack.songUrl;
@@ -71,14 +84,6 @@ export class PlayerComponent implements OnInit {
     this.playTrack();
   }
 
-  setTrack(track: Music) {
-    this.stopTrack();
-    this.trackIndex = track.id;
-    this.currentTrack = this.track[track.id];
-    this.audio.src = this.currentTrack.songUrl;
-    this.audio.load();
-    this.playTrack();
-  }
 
   setVolume(vol) {
     this.audio.volume = vol;
@@ -95,25 +100,10 @@ export class PlayerComponent implements OnInit {
 
     this.audio.src = this.list[0].songUrl;
 
-    // @ts-ignore
-    // this.resetForm()
     console.log("track: " + this.track)
     console.log("list: " + this.list)
   }
 
-
-  resetForm(form: NgForm) {
-    if (form != null) {
-      form.resetForm();
-    }
-    this.service.formData = {
-      id: null,
-      name: '',
-      imageUrl: '',
-      songUrl: '',
-      category: '',
-    };
-  };
 
   onChangeSongs(category: string) {
     this.list = [];
@@ -121,7 +111,6 @@ export class PlayerComponent implements OnInit {
       if (this.track[i].category == category) {
         this.list.push(this.track[i]);
       }
-
     }
     ;
     this.audio.src = this.list[0].songUrl;
@@ -136,4 +125,11 @@ export class PlayerComponent implements OnInit {
     }
   }
 
+  setTime(time: number) {
+    setTimeout(() => {
+      //Them ham` hien thi vao day tuy ae nhe
+      this.pauseTrack();
+      console.log("timeout")
+    }, time);
+  }
 }
