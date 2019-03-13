@@ -2,25 +2,28 @@
   <video autoplay loop oncanplay="this.muted=true">
     <source src="/assets/video/background.mp4" type="video/mp4">
   </video>
-  <div class="content">
-    <h1>Leonardo da Vinci</h1>
-    <p>Dù chỉ nắm vững một kiến thức nào đó, cũng đều có ích cho trí óc, nó sẽ ném đi những thứ vô dụng nhưng giữ lại
-      những thứ có ích.</p>
+  <div id="wrapper">
+    <div class="playpause">
+
+      <input type="checkbox" value="None" id="playpause" name="check" />
+      <label for="playpause">
+
+      </label>
+    </div>
   </div>
 </div>
 
 
-
 <span>
-  <button mat-button  (click)="onChangeSongs('Relax')">Relax</button>
+  <button mat-button (click)="onChangeSongs('Relax')">Relax</button>
   </span>
 
 <span>
-  <button mat-button  (click)="onChangeSongs('ChillOut')">Chill Out</button>
+  <button mat-button (click)="onChangeSongs('ChillOut')">Chill Out</button>
   </span>
 
 <span>
-  <button mat-button  (click)="onChangeSongs('EDM')">EDM</button>
+  <button mat-button (click)="onChangeSongs('EDM')">EDM</button>
   </span>
 <mat-nav-list *ngFor="let track of list">
   <a mat-list-item
