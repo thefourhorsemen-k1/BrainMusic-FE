@@ -15,9 +15,9 @@ import {PlayerComponent} from './music/player/player.component';
 import {
   MatButtonModule,
   MatCardModule,
-  MatDialogModule,
+  MatDialogModule, MatExpansionModule,
   MatFormFieldModule,
-  MatInputModule, MatOptionModule, MatSelectModule,
+  MatInputModule, MatListModule, MatOptionModule, MatSelectModule, MatSliderModule,
   MatSnackBarModule,
   MatToolbarModule
 } from '@angular/material';
@@ -70,8 +70,11 @@ import {ManageMusicComponent} from './admin/manage-music/manage-music.component'
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSliderModule,
     MatButtonModule,
+    MatExpansionModule,
     MatOptionModule,
+    MatListModule,
     MatSelectModule
   ],
   entryComponents: [

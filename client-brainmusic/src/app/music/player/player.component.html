@@ -8,28 +8,51 @@
       những thứ có ích.</p>
   </div>
 </div>
-<div class='player'>
-  <audio src= '{{service.formData.songUrl}}' required></audio>
-  <img src='{{service.formData.imageUrl}}'/>
-  <div class='info'>
-    <div class='name'>{{service.formData.name}}</div>
-  </div>
-  <div class='btns'>
-    <div class="iconfont play-pause icon-play"></div>
-  </div>
-  <div class='progress'>
+<p>Audioplayer</p>
 
-  </div>
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Playing: {{currentTrack.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        Track: {{currentTrack.id + 1}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div>
+      <mat-nav-list *ngFor="let track of __tracks">
+        <a mat-list-item
+           [class.selected]="track === currentTrack"
+           (click)="setTrack(track)">{{track.name}}</a>
+      </mat-nav-list>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
+<div id="sliders">
+  Volume:
+  <mat-slider
+    min="0"
+    max="1"
+    step="0.001"
+    value="{{audio.volume}}"
+    (change)="__setVolume($event.value)">
+  </mat-slider>
+  Progress:
+  <mat-slider
+    min="0"
+    max="{{audio.duration}}"
+    step="0.001"
+    value="{{audio.currentTime}}"
+    (change)="setProgress($event.value)">
+  </mat-slider>
 </div>
-<table class="table-bordered table table-hover">
-  <thead>
-  <tr>
-    <td>Song list</td>
-  </tr>
-  </thead>
-  <tr class="listSong" *ngFor="let song of service.list">
+<span>
+  <button mat-button id="play" (click)="playTrack()">Play</button>
+  <button mat-button id="pause" (click)="pauseTrack()">Pause</button>
+  <button mat-button id="stop" (click)="stopTrack()">Stop</button>
+  <button mat-button id="next" (click)="nextTrack()">Next</button>
+  <button mat-button id="previous" (click)="previousTrack()">Previous</button>
+</span>
 
-    <td (click)="populateForm(song)">{{song.name}}</td>
-  </tr>
-
-</table>

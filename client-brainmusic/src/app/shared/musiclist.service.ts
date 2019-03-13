@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 
 import {HttpClient} from '@angular/common/http';
 import {Music} from './music.model';
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import {Music} from './music.model';
 export class MusiclistService {
 
   formData: Music;
-  list: Music[];
+  public list: Music[];
   private API_URL = 'http://localhost:8082/admin/songs/';
 
   constructor(private http: HttpClient) {
@@ -21,6 +22,7 @@ export class MusiclistService {
 
   refreshList() {
     this.http.get(this.API_URL).toPromise().then(res => this.list = res as Music[]);
+    // console.log(this.list);
   }
 
 

@@ -21,6 +21,7 @@ export class ManageMusicComponent implements OnInit {
 
   ngOnInit() {
     this.service.refreshList();
+    console.log(this.service.formData)
     // @ts-ignore
     this.resetForm();
 
