@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
  }
 
   ngOnInit() {
-    this.service.refreshList()
+    this.service.refreshList();
     console.log("app")
 
   }

@@ -8,28 +8,12 @@
       những thứ có ích.</p>
   </div>
 </div>
-<p>Audioplayer</p>
 
-<mat-accordion>
-  <mat-expansion-panel (opened)="panelOpenState = true"
-                       (closed)="panelOpenState = false">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Playing: {{currentTrack.name}}
-      </mat-panel-title>
-      <mat-panel-description>
-        Track: {{currentTrack.id + 1}}
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <div>
-      <mat-nav-list *ngFor="let track of __tracks">
-        <a mat-list-item
-           [class.selected]="track === currentTrack"
-           (click)="setTrack(track)">{{track.name}}</a>
-      </mat-nav-list>
-    </div>
-  </mat-expansion-panel>
-</mat-accordion>
+
+<p>Audioplayer</p>
+Playing: {{currentTrack.name}}
+Category: {{currentTrack.category}}
+
 <div id="sliders">
   Volume:
   <mat-slider

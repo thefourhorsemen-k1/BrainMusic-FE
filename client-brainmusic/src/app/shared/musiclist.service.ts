@@ -12,7 +12,6 @@ export class MusiclistService {
   formData: Music;
   public list: Music[];
   private API_URL = 'http://localhost:8082/admin/songs/';
-
   constructor(private http: HttpClient) {
   }
 
@@ -29,6 +28,12 @@ export class MusiclistService {
   putSong(formData: Music) {
     return this.http.put(this.API_URL + formData.id, formData);
   }
+
+
+  getCateSong(category: string) {
+    return this.http.get(this.API_URL + "category/"+ category);
+  }
+
 
   deleteSong(id: number) {
     return this.http.delete(this.API_URL + id);

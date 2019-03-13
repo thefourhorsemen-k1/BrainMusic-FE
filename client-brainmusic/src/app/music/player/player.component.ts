@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MusiclistService} from '../../shared/musiclist.service';
 import {Music} from '../../shared/music.model';
+import {NgForm} from "@angular/forms";
 
 declare function runjs(): any;
 
@@ -16,7 +17,7 @@ export class PlayerComponent implements OnInit {
   constructor(
     private service: MusiclistService
   ) {
-     this.currentTrack = this.track[this.trackIndex];
+    this.currentTrack = this.track[this.trackIndex];
     this.trackIndex = 0;
 
   }
@@ -89,11 +90,34 @@ export class PlayerComponent implements OnInit {
 
   ngOnInit() {
 
-     this.audio = new Audio();
+    this.audio = new Audio();
 
     this.audio.src = this.currentTrack.songUrl;
 
+    // @ts-ignore
+    // this.resetForm()
+    console.log(this.track)
   }
+
+
+  resetForm(form: NgForm) {
+    if (form != null) {
+      form.resetForm();
+    }
+    this.service.formData = {
+      id: null,
+      name: '',
+      imageUrl: '',
+      songUrl: '',
+      category: '',
+    };
+  };
+
+  onChangeSongs(category: string) {
+    this.service.getCateSong(category).subscribe(res => {
+        this.service.refreshList();
+      })
+  };
 
 
   ngOnDestroy() {
