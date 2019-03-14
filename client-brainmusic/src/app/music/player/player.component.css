@@ -1,17 +1,38 @@
-.playpause label { display: block; box-sizing: border-box; width: 0; height: 74px; border-color: transparent transparent transparent white; transition: 100ms all ease; cursor: pointer; border-style: double; border-width: 0px 0 0px 60px;} .playpause input[type="checkbox"] { visibility: hidden; } .playpause input[type="checkbox"]:checked + label { border-style: solid; border-width: 37px 0 37px 60px; }
-/*.playpause{*/
-    /*!*border:8px solid #000;*!*/
-    /*!*border-radius:50%;*!*/
-  /*height:150px;*/
-  /*width:150px;*/
-  /*text-align:center;*/
-  /*position:relative;*/
-  /*background-color: transparent;*/
-/*}*/
-label{
-  position:absolute ;
-  left:45px;
-  top:35px;
+.playpause label {
+  display: block;
+  box-sizing: border-box;
+  width: 0;
+  height: 74px;
+  border-color: transparent transparent transparent black;
+  transition: 100ms all ease;
+  cursor: pointer;
+  border-style: double;
+  border-width: 0px 0 0px 60px;
+}
+
+.playpause input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.playpause input[type="checkbox"]:checked + label {
+  border-style: solid;
+  border-width: 37px 0 37px 60px;
+}
+
+.playpause {
+  /*border: 8px solid #000;*/
+  /*border-radius: 50%;*/
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  position: relative;
+  background-color: transparent;
+}
+
+label {
+  position: absolute;
+  left: 45px;
+  top: 35px;
 }
 
 .player {
@@ -70,10 +91,12 @@ label{
   top: 0;
   background-color: #00a8ff;
 }
+
 @font-face {
   font-family: iconfont;
   src: url('//static0.qianqian.com/web/st/font/iconfont-4e6.woff') format('woff');
 }
+
 .iconfont {
   font-family: iconfont !important;
   font-size: 16px;
@@ -81,96 +104,127 @@ label{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-list:before {
   content: "\e603";
 }
+
 .icon-loop-single:before {
   content: "\e604";
 }
+
 .icon-arrow-right:before {
   content: "\e605";
 }
+
 .icon-loop:before {
   content: "\e606";
 }
+
 .icon-prev:before {
   content: "\e607";
 }
+
 .icon-favor:before {
   content: "\e608";
 }
+
 .icon-next:before {
   content: "\e60a";
 }
+
 .icon-download:before {
   content: "\e60b";
 }
+
 .icon-search:before {
   content: "\e60c";
 }
+
 .icon-zhanwei1:before {
   content: "\e610";
 }
+
 .icon-favor1:before {
   content: "\e618";
 }
+
 .icon-random:before {
   content: "\e619";
 }
+
 .icon-play:before {
   content: "\e616";
 }
+
 .icon-stop:before {
   content: "\e617";
 }
+
 .icon-mv:before {
   content: "\e61b";
 }
+
 .icon-arrow-down:before {
   content: "\e61d";
 }
+
 .icon-arrow-left:before {
   content: "\e61e";
 }
+
 .icon-arrow-up:before {
   content: "\e61f";
 }
+
 .icon-listen:before {
   content: "\e609";
 }
+
 .icon-round:before {
   content: "\e60d";
 }
+
 .icon-triangle:before {
   content: "\e60e";
 }
+
 .icon-information:before {
   content: "\e60f";
 }
+
 .icon-home:before {
   content: "\e611";
 }
+
 .icon-i:before {
   content: "\e612";
 }
+
 .icon-information-:before {
   content: "\e613";
 }
+
 .icon-bubble-filled-icon:before {
   content: "\e614";
 }
+
 .icon-round-right:before {
   content: "\e615";
 }
+
 .icon-vip:before {
   content: "\e61a";
 }
+
 .icon-word:before {
   content: "\e61c";
 }
+
 #currentTime {
   width: 100%;
 }
+
 .background {
   position: relative;
   width: 100%;
@@ -180,6 +234,7 @@ label{
   align-items: center;
   height: 700px;
 }
+
 .background video {
   position: absolute;
   top: 0;
@@ -189,6 +244,7 @@ label{
   height: 100%;
   pointer-events: none;
 }
+
 .background .content {
   position: relative;
   z-index: 1;
@@ -196,6 +252,7 @@ label{
   margin: 0 auto;
   text-align: center;
 }
+
 .background .content h1 {
   margin: 0;
   padding: 0;
@@ -203,14 +260,35 @@ label{
   text-transform: uppercase;
   color: #fff;
 }
+
 .background .content p {
   font-size: 1.5em;
   text-transform: uppercase;
   color: #fff;
 }
 
-.table thead{
+.table thead {
   text-align: center;
   font-weight: bolder;
   font-size: 20px;
 }
+
+.container-fluid {
+  margin-top: 10px;
+  padding: 0 200px;
+}
+
+.icon {
+  padding-top: 80px;
+  font-size: 40px;
+  letter-spacing: 4px;
+}
+
+.container-fluid img {
+  height: 250px;
+}
+
+.example-card {
+  max-width: 400px;
+}
+

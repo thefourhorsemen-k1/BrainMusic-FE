@@ -1,36 +1,70 @@
-<div class="background">
-  <video autoplay loop oncanplay="this.muted=true">
-    <source src="/assets/video/background.mp4" type="video/mp4">
-  </video>
-  <div id="wrapper">
-    <div class="playpause">
+<!--<div class="background">-->
+<!--<video autoplay loop oncanplay="this.muted=true">-->
+<!--<source src="/assets/video/background.mp4" type="video/mp4">-->
+<!--</video>-->
 
-      <input type="checkbox" value="None" id="playpause" name="check" />
-      <label for="playpause">
 
-      </label>
+<div class="player-background">
+  <div class="icon text-center">
+    <a><i class="fas fa-headphones"></i> I want listen to</a>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <mat-card class="example-card">
+          <img mat-card-image src="assets/background/relax.jpeg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <button mat-button (click)="onChangeSongs('Relax')">Relax</button>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="example-card">
+          <img mat-card-image src="assets/background/chillout.jpeg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <button mat-button (click)="onChangeSongs('Chill out')">Chill out</button>
+          </mat-card-content>
+        </mat-card>
+
+      </div>
+      <div class="col-md-4">
+        <mat-card class="example-card">
+          <img mat-card-image src="assets/background/edm.jpeg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <button mat-button (click)="onChangeSongs('EDM')">EDM</button>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="example-card">
+          <img mat-card-image src="assets/background/pop.jpeg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <button mat-button (click)="onChangeSongs('Pop')">US POP</button>
+          </mat-card-content>
+        </mat-card>
+
+      </div>
+      <div class="col-md-4">
+        <mat-card class="example-card">
+          <img mat-card-image src="assets/background/kpop.jpeg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <button mat-button (click)="onChangeSongs('Kpop')">Kpop</button>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="example-card">
+          <img mat-card-image src="assets/background/vpop.jpeg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <button mat-button (click)="onChangeSongs('Vpop')">Vpop</button>
+          </mat-card-content>
+        </mat-card>
+
+      </div>
     </div>
   </div>
 </div>
-
-
-<span>
-  <button mat-button (click)="onChangeSongs('Relax')">Relax</button>
-  </span>
-
-<span>
-  <button mat-button (click)="onChangeSongs('ChillOut')">Chill Out</button>
-  </span>
-
-<span>
-  <button mat-button (click)="onChangeSongs('EDM')">EDM</button>
-  </span>
-
-
 <!--<mat-nav-list *ngFor="let track of list">-->
-  <!--<a mat-list-item-->
-     <!--[class.selected]="track === currentTrack"-->
-     <!--(click)="setTrack(track)">{{track.name}}</a>-->
+<!--<a mat-list-item-->
+<!--[class.selected]="track === currentTrack"-->
+<!--(click)="setTrack(track)">{{track.name}}</a>-->
 <!--</mat-nav-list>-->
 
 <p>Audioplayer</p>
@@ -49,11 +83,11 @@ Category: {{currentTrack.category}}
   Progress:
 
   <mat-slider id="currentTime"
-    min="0"
-    max="{{audio.duration}}"
-    step="0.001"
-    value="{{audio.currentTime}}"
-    (change)="setProgress($event.value)">
+              min="0"
+              max="{{audio.duration}}"
+              step="0.001"
+              value="{{audio.currentTime}}"
+              (change)="setProgress($event.value)">
   </mat-slider>
 </div>
 <span>
@@ -66,4 +100,12 @@ Category: {{currentTrack.category}}
   <button mat-button id="5mins" (click)="setTime(300000)">5 mins</button>
 
 </span>
+<!--<div id="wrapper">-->
+  <!--<div class="playpause">-->
 
+    <!--<input type="checkbox" value="None" id="playpause" name="check" />-->
+    <!--<label for="playpause">-->
+
+    <!--</label>-->
+  <!--</div>-->
+<!--</div>-->
