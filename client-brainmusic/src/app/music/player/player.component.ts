@@ -14,7 +14,7 @@ export class PlayerComponent implements OnInit {
 
   formData: Music;
   list: Music[];
-
+  tempTime : number = 0;
   constructor(
     private service: MusiclistService
   ) {
@@ -30,23 +30,35 @@ export class PlayerComponent implements OnInit {
   private currentTrack: Music
 
   playTrack() {
-    this.audio.play();
-    this.playing = true;
-    setTimeout(() => {
-      //Them ham` hien thi vao day tuy ae nhe
-      alert("Ban hay nghi ngoi 5 phut truoc khi nghe tiep")
-      console.log("timeout")
-    }, 1500000);
-    console.log(this.audio.duration)
-    // setTimeout(
-    //   () => {
-    //     //Them ham` hien thi vao day tuy ae nhe
-    //     this.nextTrack()
-    //     console.log("timeout")
-    //   }, 5000
-    // )
+    if(this.audio.duration > 1500000) {
+      this.tempTime += this.audio.duration;
+      this.audio.play();
+      console.log(this.audio.currentTime);
+      this.playing = true;
+      this.autoNext()
+      console.log(this.audio.duration)
+      setTimeout(() => {
+        //Them ham` hien thi vao day tuy ae nhe
+        alert("Ban hay nghi ngoi 5 phut truoc khi nghe tiep")
+        console.log("timeout")
+      }, 1500000);
+    }else{
+      this.tempTime = this.audio.duration;
+
+    }
+
   }
 
+  autoNext(){
+    setTimeout(
+      () => {
+        //Them ham` hien thi vao day tuy ae nhe
+        console.log("Timeout" + this.audio.currentTime)
+        this.nextTrack()
+
+      }, this.audio.duration*1000 - this.audio.currentTime*1000
+    )
+  }
 
   pauseTrack() {
     this.audio.pause();
@@ -62,14 +74,14 @@ export class PlayerComponent implements OnInit {
   nextTrack() {
     this.stopTrack();
     this.trackIndex++;
-    if (this.trackIndex > this.list.length) {
+    if (this.trackIndex > this.list.length -1) {
       this.trackIndex = 0;
-      this.playTrack();
     }
     this.currentTrack = this.list[this.trackIndex];
     this.audio.src = this.currentTrack.songUrl;
     this.audio.load();
-    this.playTrack();
+
+    setTimeout(  () => {this.playTrack()}, 3000)
   }
 
   previousTrack() {
@@ -91,6 +103,9 @@ export class PlayerComponent implements OnInit {
 
   setProgress(prog) {
     this.audio.currentTime = prog;
+    this.autoNext();
+    console.log(this.audio.currentTime)
+    console.log(this.audio.duration - this.audio.currentTime)
   }
 
   ngOnInit() {
@@ -107,13 +122,16 @@ export class PlayerComponent implements OnInit {
 
   onChangeSongs(category: string) {
     this.list = [];
+
     for (let i = 0; i < this.track.length; i++) {
       if (this.track[i].category == category) {
         this.list.push(this.track[i]);
       }
     }
     ;
-    this.audio.src = this.list[0].songUrl;
+    this.currentTrack = this.list[this.trackIndex];
+    this.audio.load;
+    // this.audio.src = this.list[0].songUrl;
     console.log(this.list)
   };
 
