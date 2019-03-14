@@ -24,17 +24,17 @@
   </span>
 
 <span>
-  <button mat-button  (click)="onChangeSongs('POP')">EDM</button>
+  <button mat-button  (click)="onChangeSongs('POP')">POP</button>
   </span>
 
 
 <span>
-  <button mat-button  (click)="onChangeSongs('KPOP')">EDM</button>
+  <button mat-button  (click)="onChangeSongs('KPOP')">KPOP</button>
   </span>
 
 
 <span>
-  <button mat-button  (click)="onChangeSongs('VPop')">EDM</button>
+  <button mat-button  (click)="onChangeSongs('VPop')">VPOP</button>
   </span>
 
 <!--<mat-nav-list *ngFor="let track of list">-->
@@ -67,13 +67,12 @@ Category: {{currentTrack.category}}
   </mat-slider>
 </div>
 <span>
-  <button mat-button id="play" (click)="playTrack()">Play</button>
-  <button mat-button id="pause" (click)="pauseTrack()">Pause</button>
+  <button mat-button id="playbutton" (click)="playbutton(1500000)">Button</button>
   <button mat-button id="stop" (click)="stopTrack()">Stop</button>
   <button mat-button id="next" (click)="nextTrack()">Next</button>
   <button mat-button id="previous" (click)="previousTrack()">Previous</button>
-  <button mat-button id="25mins" (click)="setTime(1500000)">25mins</button>
-  <button mat-button id="5mins" (click)="setTime(300000)">5 mins</button>
+  <button mat-button id="25mins" (click)="playbutton(1500000)">25mins</button>
+  <button mat-button id="5mins" (click)="playbutton(300000)">5 mins</button>
 
 </span>
 
