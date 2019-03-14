@@ -71,41 +71,58 @@
 Playing: {{currentTrack.name}}
 Category: {{currentTrack.category}}
 
-<div id="sliders">
-  Volume:
-  <mat-slider
-    min="0"
-    max="1"
-    step="0.001"
-    value="{{audio.volume}}"
-    (change)="setVolume($event.value)">
-  </mat-slider>
-  Progress:
-
-  <mat-slider id="currentTime"
-              min="0"
-              max="{{audio.duration}}"
-              step="0.001"
-              value="{{audio.currentTime}}"
-              (change)="setProgress($event.value)">
-  </mat-slider>
-</div>
-<span>
-  <button mat-button id="play" (click)="playTrack()">Play</button>
-  <button mat-button id="pause" (click)="pauseTrack()">Pause</button>
-  <button mat-button id="stop" (click)="stopTrack()">Stop</button>
-  <button mat-button id="next" (click)="nextTrack()">Next</button>
-  <button mat-button id="previous" (click)="previousTrack()">Previous</button>
-  <button mat-button id="25mins" (click)="setTime(1500000)">25mins</button>
-  <button mat-button id="5mins" (click)="setTime(300000)">5 mins</button>
-
-</span>
-<!--<div id="wrapper">-->
-  <!--<div class="playpause">-->
-
-    <!--<input type="checkbox" value="None" id="playpause" name="check" />-->
-    <!--<label for="playpause">-->
-
-    <!--</label>-->
-  <!--</div>-->
+<!--<div id="sliders">-->
+  <!--Progress:-->
+  <!--<mat-slider id="currentTime"-->
+              <!--min="0"-->
+              <!--max="{{audio.duration}}"-->
+              <!--step="0.001"-->
+              <!--value="{{audio.currentTime}}"-->
+              <!--(change)="setProgress($event.value)">-->
+  <!--</mat-slider>-->
 <!--</div>-->
+
+<div class="playpause">
+  <input type="checkbox" value="None" id="playpause" name="check"/>
+  <label for="playpause">
+  </label>
+</div>
+
+<span class="player-icon">
+<!--<button mat-button id="play" (click)="playTrack()">Play</button>-->
+  <!--<button mat-button id="pause" (click)="pauseTrack()">Pause</button>-->
+<button mat-button id="stop" (click)="stopTrack()"><i class="far fa-stop-circle fa-3x"></i></button>
+<button mat-button id="next" (click)="nextTrack()"><i class="fas fa-step-forward fa-3x"></i></button>
+<button mat-button id="previous" (click)="previousTrack()"><i class="fas fa-step-backward fa-3x "></i></button>
+<button mat-button id="25mins" (click)="setTime(1500000)">25mins</button>
+<button mat-button id="5mins" (click)="setTime(300000)">5 mins</button>
+   Volume:
+    <mat-slider
+      min="0"
+      max="1"
+      step="0.001"
+      value="{{audio.volume}}"
+      (change)="setVolume($event.value)">
+    </mat-slider>
+</span>
+
+
+<!--<div>-->
+<!--<a href="#" (click)="stopTrack()">-->
+<!--<i class="far fa-stop-circle"></i>-->
+<!--</a>-->
+<!--</div>-->
+<!--<div>-->
+<!--<a href="#" (click)="nextTrack()">-->
+<!--<i class="fas fa-step-forward"></i>-->
+<!--</a>-->
+<!--</div>-->
+<!--<div>-->
+<!--<a href="#" (click)="previousTrack()">-->
+<!--<i class="fas fa-step-backward"></i>-->
+<!--</a>-->
+<!--</div>-->
+
+
+
+
