@@ -67,12 +67,15 @@ Category: {{currentTrack.category}}
   </mat-slider>
 </div>
 <span>
-  <button mat-button id="playbutton" (click)="playbutton(1500000)">Button</button>
+    <div class='btns'>
+    <div class="iconfont play-pause icon-play"></div>
+  </div>
+  <button mat-button class="playbutton" (click)="playbutton()">Button</button>
   <button mat-button id="stop" (click)="stopTrack()">Stop</button>
   <button mat-button id="next" (click)="nextTrack()">Next</button>
   <button mat-button id="previous" (click)="previousTrack()">Previous</button>
-  <button mat-button id="25mins" (click)="playbutton(1500000)">25mins</button>
-  <button mat-button id="5mins" (click)="playbutton(300000)">5 mins</button>
+  <button mat-button class="playbutton" (click)="onChangeTimePlay(1500000)">25mins</button>
+  <button mat-button class="playbutton" (click)="onChangeSongPlay(300000)">5 mins</button>
 
 </span>
 
