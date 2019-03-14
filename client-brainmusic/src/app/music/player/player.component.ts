@@ -100,7 +100,7 @@ export class PlayerComponent implements OnInit {
 
     this.audio.src = this.list[0].songUrl;
 
-    console.log("track: " + this.track)
+    console.log("track: " + this.track);
     console.log("list: " + this.list)
   }
 
@@ -112,7 +112,6 @@ export class PlayerComponent implements OnInit {
         this.list.push(this.track[i]);
       }
     }
-    ;
     this.audio.src = this.list[0].songUrl;
     console.log(this.list)
   };

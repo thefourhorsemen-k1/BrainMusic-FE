@@ -6,6 +6,7 @@ import {RegisterFormComponent} from './user/register-form/register-form.componen
 import {MusicComponent} from './music/music.component';
 import {AdminComponent} from './admin/admin.component';
 import {ManageMusicComponent} from './admin/manage-music/manage-music.component';
+import {AboutComponent} from "./about/about.component";
 
 const routes: Routes = [
   {
@@ -25,6 +26,9 @@ const routes: Routes = [
   },
   {
     path: 'admin', component: AdminComponent
+  },
+  {
+    path: 'about', component: AboutComponent
   }
 ];
 

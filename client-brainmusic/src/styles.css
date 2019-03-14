@@ -16,3 +16,7 @@
   margin: 0 !important;
   padding: 0 !important;
 }
+.content{
+  background-image: url("assets/background/hero.jpg");
+  height: 720px;
+}

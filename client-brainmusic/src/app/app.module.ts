@@ -33,8 +33,8 @@ import {HeaderComponent} from './homepage/header/header.component';
 import {MainComponent} from './homepage/main/main.component';
 import {MusicComponent} from './music/music.component';
 import {ManageMusicComponent} from './admin/manage-music/manage-music.component';
-
-// import {NavbarHeaderComponent} from './navbar-header/navbar-header.component';
+import { AboutComponent } from './about/about.component';
+import { FeedbackButtonComponent } from './feedback-button/feedback-button.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +53,8 @@ import {ManageMusicComponent} from './admin/manage-music/manage-music.component'
     MainComponent,
     MusicComponent,
     ManageMusicComponent,
+    AboutComponent,
+    FeedbackButtonComponent,
 
     // NavbarHeaderComponent
   ],
