@@ -8,11 +8,6 @@
   background: linear-gradient(to right, #ff5722, #ff9800);
 }
 
-.player-background {
-  height: 100%;
-  background: linear-gradient(to right, #f3f8ff, #deecff);
-}
-
 .navbar-brand {
   background: url("assets/background/logo.png") no-repeat 50% 50%;
   background-size: 80px 78px;

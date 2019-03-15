@@ -60,14 +60,13 @@
     Category: {{currentTrack.category}}
 
     <span>
-  <button mat-button id="playbutton" (click)="playTrack()"><i class="fas fa-play fa-3x"></i></button>
-  <button mat-button id="pausebutton" (click)="pauseTrack()"><i class="fas fa-pause fa-3x"></i></button>
+      <button mat-button id="playbutton" (click)="playTrack()"><i class="fas fa-play fa-3x"></i></button>
+      <button mat-button id="pausebutton" (click)="pauseTrack()"><i class="fas fa-pause fa-3x"></i></button>
       <button mat-button id="next" (click)="nextTrack()"><i class="fas fa-forward fa-3x"></i></button>
-  <button mat-button id="stop" (click)="stopTrack()"><i class="fas fa-stop-circle fa-3x"></i></button>
-  <button mat-button id="previous" (click)="previousTrack()"><i class="fas fa-backward fa-3x"></i></button>
-  <button mat-button id="10mins" (click)="setPlayTime(600000)">25mins</button>
-  <button mat-button id="5mins" (click)="setPlayTime(300000)">5 mins</button>
-      <div id="sliders">
+      <button mat-button id="stop" (click)="stopTrack()"><i class="fas fa-stop-circle fa-3x"></i></button>
+      <button mat-button id="previous" (click)="previousTrack()"><i class="fas fa-backward fa-3x"></i></button>
+      <button mat-button id="10mins" (click)="setPlayTime(600000)">25mins</button>
+      <button mat-button id="5mins" (click)="setPlayTime(300000)">5 mins</button>
       Volume:
         <mat-slider
         min="0"
@@ -76,7 +75,6 @@
         value="{{audio.volume}}"
         (change)="setVolume($event.value)">
         </mat-slider>
-      </div>
     </span>
   </div>
 </div>
