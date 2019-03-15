@@ -278,3 +278,11 @@ span {
 body{
   height: 100%;
 }
+.player-background p{
+  position: relative;
+  left: 15px;
+}
+.player-background span img{
+  width: 40px;
+  height: 40px;
+}

@@ -60,20 +60,34 @@
     Category: {{currentTrack.category}}
 
     <span>
-      <button mat-button id="playbutton" (click)="playTrack()"><i class="fas fa-play fa-3x"></i></button>
-      <button mat-button id="pausebutton" (click)="pauseTrack()"><i class="fas fa-pause fa-3x"></i></button>
-      <button mat-button id="next" (click)="nextTrack()"><i class="fas fa-forward fa-3x"></i></button>
-      <button mat-button id="stop" (click)="stopTrack()"><i class="fas fa-stop-circle fa-3x"></i></button>
-      <button mat-button id="previous" (click)="previousTrack()"><i class="fas fa-backward fa-3x"></i></button>
-      <button mat-button id="10mins" (click)="setPlayTime(600000)">25mins</button>
-      <button mat-button id="5mins" (click)="setPlayTime(300000)">5 mins</button>
-      Volume:
+      <button mat-button id="playbutton" (click)="playTrack()">
+        <img src="assets/background/play-button.png" alt="play">
+      </button>
+      <button mat-button id="pausebutton" (click)="pauseTrack()">
+        <img src="assets/background/pause-button.png" alt="play">
+      </button>
+      <button mat-button id="next" (click)="nextTrack()">
+        <img src="assets/background/right-arrow.png" alt="play">
+      </button>
+      <button mat-button id="stop" (click)="stopTrack()">
+        <img src="assets/background/stop.png" alt="play">
+      </button>
+      <button mat-button id="previous" (click)="previousTrack()">
+        <img src="assets/background/left-arrow.png" alt="play">
+      </button>
+      <button mat-button id="10mins" (click)="setPlayTime(600000)">
+        <img src="https://www.freeiconspng.com/uploads/number-10-9.png" width="350" alt="Free Vector Number 10" />
+      </button>
+      <button mat-button id="5mins" (click)="setPlayTime(300000)">
+        <img src="assets/background/5.png" alt="play">
+      </button>
+      <a>Volume:</a>
         <mat-slider
-        min="0"
-        max="1"
-        step="0.001"
-        value="{{audio.volume}}"
-        (change)="setVolume($event.value)">
+          min="0"
+          max="1"
+          step="0.001"
+          value="{{audio.volume}}"
+          (change)="setVolume($event.value)">
         </mat-slider>
     </span>
   </div>

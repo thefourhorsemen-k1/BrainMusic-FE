@@ -2,11 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d80727e-b5b9-43e9-ab99-9d63ea80e23c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/chillout.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/css(1)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/edm.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/es2015-polyfills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/jquery-3.3.1.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/kpop.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/polyfills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/pop.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/relax.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/vendor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/ClientBrainmusic_files/vpop.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/thresh.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/vladimir.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-brainmusic/src/assets/background/zed.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-brainmusic/src/app/about/about.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-brainmusic/src/app/about/about.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-brainmusic/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-brainmusic/src/styles.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,11 +65,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-brainmusic/src/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
@@ -60,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
+            <state relative-caret-position="421">
+              <caret line="81" column="63" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -72,16 +88,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="280" lean-forward="true" selection-start-line="280" selection-end-line="280" />
+            <state relative-caret-position="526">
+              <caret line="286" column="12" selection-start-line="286" selection-start-column="12" selection-end-line="286" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/homepage/homepage.component.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/about/about.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
+            <state relative-caret-position="526">
               <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
             </state>
           </provider>
@@ -118,10 +139,10 @@
         <option value="$PROJECT_DIR$/client-brainmusic/src/assets/js/music-player.js" />
         <option value="$PROJECT_DIR$/client-brainmusic/src/app/homepage/homepage.component.html" />
         <option value="$PROJECT_DIR$/client-brainmusic/src/app/homepage/homepage.component.ts" />
-        <option value="$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.html" />
         <option value="$PROJECT_DIR$/client-brainmusic/src/styles.css" />
-        <option value="$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.css" />
         <option value="$PROJECT_DIR$/client-brainmusic/src/app/about/about.component.html" />
+        <option value="$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.css" />
+        <option value="$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.html" />
       </list>
     </option>
   </component>
@@ -202,6 +223,21 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BrainMusic-FE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BrainMusic-FE" type="462c0819:PsiDirectoryNode" />
+              <item name="client-brainmusic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BrainMusic-FE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BrainMusic-FE" type="462c0819:PsiDirectoryNode" />
+              <item name="client-brainmusic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="background" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -244,7 +280,7 @@
       <workItem from="1552461907426" duration="1705000" />
       <workItem from="1552463901603" duration="5584000" />
       <workItem from="1552530834117" duration="22607000" />
-      <workItem from="1552612686068" duration="10027000" />
+      <workItem from="1552612686068" duration="14065000" />
     </task>
     <task id="LOCAL-00001" summary="play pause button">
       <created>1552468718969</created>
@@ -316,11 +352,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552620108369</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="sua anh about, chinh cac nut">
+      <created>1552622975618</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1552622975618</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40204000" />
+    <option name="totallyTimeSpent" value="44242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -360,7 +403,8 @@
     <MESSAGE value="thay doi 1 so ten anh" />
     <MESSAGE value="update player" />
     <MESSAGE value="sua cac button play,pause" />
-    <option name="LAST_COMMIT_MESSAGE" value="sua cac button play,pause" />
+    <MESSAGE value="sua anh about, chinh cac nut" />
+    <option name="LAST_COMMIT_MESSAGE" value="sua anh about, chinh cac nut" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/feedback-button/feedback-button.component.html">
@@ -525,19 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/homepage/homepage.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-brainmusic/src/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -553,13 +584,6 @@
     <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/music/music.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-brainmusic/src/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -567,17 +591,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.css">
+    <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/about/about.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="280" lean-forward="true" selection-start-line="280" selection-end-line="280" />
+        <state relative-caret-position="526">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/about/about.component.html">
+    <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="465">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/homepage/homepage.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="286" column="12" selection-start-line="286" selection-start-column="12" selection-end-line="286" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-brainmusic/src/app/music/player/player.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="81" column="63" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
         </state>
       </provider>
     </entry>
