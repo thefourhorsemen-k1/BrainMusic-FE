@@ -54,34 +54,30 @@
       </div>
     </div>
   </div>
-</div>
+  <div class="player-music">
+    <p>Audioplayer</p>
+    Playing: {{currentTrack.name}}
+    Category: {{currentTrack.category}}
 
-<!--<mat-nav-list *ngFor="let track of list">-->
-<!--<a mat-list-item-->
-<!--[class.selected]="track === currentTrack"-->
-<!--(click)="setTrack(track)">{{track.name}}</a>-->
-<!--</mat-nav-list>-->
-<div class="play-music">
-  <p>Audioplayer</p>
-  Playing: {{currentTrack.name}}
-  Category: {{currentTrack.category}}
-
-  <span class="player-icon">
-  <button mat-button id="play" (click)="playTrack()"><i class="fas fa-play fa-3x"></i></button>
-  <button mat-button id="pause" (click)="pauseTrack()"><i class="fas fa-pause fa-3x"></i></button>
-  <button mat-button id="stop" (click)="stopTrack()"><i class="far fa-stop-circle fa-3x"></i></button>
-  <button mat-button id="next" (click)="nextTrack()"><i class="fas fa-step-forward fa-3x"></i></button>
-  <button mat-button id="previous" (click)="previousTrack()"><i class="fas fa-step-backward fa-3x "></i></button>
-  <button mat-button id="25mins" (click)="playbutton(1500000)">25mins</button>
-  <button mat-button id="5mins" (click)="playbutton(300000)">5 mins</button>
-   Volume:
-    <mat-slider
-      min="0"
-      max="1"
-      step="0.001"
-      value="{{audio.volume}}"
-      (change)="setVolume($event.value)">
-    </mat-slider>
-</span>
+    <span>
+  <button mat-button id="playbutton" (click)="playTrack()"><i class="fas fa-play fa-3x"></i></button>
+  <button mat-button id="pausebutton" (click)="pauseTrack()"><i class="fas fa-pause fa-3x"></i></button>
+      <button mat-button id="next" (click)="nextTrack()"><i class="fas fa-forward fa-3x"></i></button>
+  <button mat-button id="stop" (click)="stopTrack()"><i class="fas fa-stop-circle fa-3x"></i></button>
+  <button mat-button id="previous" (click)="previousTrack()"><i class="fas fa-backward fa-3x"></i></button>
+  <button mat-button id="10mins" (click)="setPlayTime(600000)">25mins</button>
+  <button mat-button id="5mins" (click)="setPlayTime(300000)">5 mins</button>
+      <div id="sliders">
+      Volume:
+        <mat-slider
+        min="0"
+        max="1"
+        step="0.001"
+        value="{{audio.volume}}"
+        (change)="setVolume($event.value)">
+        </mat-slider>
+      </div>
+    </span>
+  </div>
 </div>
 
