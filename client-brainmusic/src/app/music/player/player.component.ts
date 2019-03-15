@@ -15,39 +15,51 @@ export class PlayerComponent implements OnInit {
   formData: Music;
   list: Music[];
   tempTime : number = 0;
+  timeAlert : boolean = false;
+
   constructor(
     private service: MusiclistService
   ) {
     this.trackIndex = 0;
-
   }
 
   private audio: any = null;
   private playing = false;
   private trackIndex = 0;
   private track: Music[] = this.service.list;
+  private currentTrack: Music;
+  private timeout;
 
-  private currentTrack: Music
+
+  playbutton(time){
+    if(this.playing == false){
+      console.log(time);
+      this.playTrack();
+      this.playing = true;
+      this.timeout = setTimeout(() => {
+        this.pauseTrack();
+        alert("Ban hay nghi ngoi 5 phut truoc khi nghe tiep")
+        console.log("timeout");
+        this.timeAlert = true;
+      }, time);
+    }else {
+
+      this.pauseTrack();
+      this.playing = false;
+    }
+  }
+
 
   playTrack() {
-    if(this.audio.duration > 1500000) {
-      this.tempTime += this.audio.duration;
+      this.tempTime = this.audio.duration;
       this.audio.play();
-      console.log(this.audio.currentTime);
+      console.log("play");
       this.playing = true;
       this.autoNext()
       console.log(this.audio.duration)
-      setTimeout(() => {
-        //Them ham` hien thi vao day tuy ae nhe
-        alert("Ban hay nghi ngoi 5 phut truoc khi nghe tiep")
-        console.log("timeout")
-      }, 1500000);
-    }else{
-      this.tempTime = this.audio.duration;
-
-    }
-
   }
+
+
 
   autoNext(){
     setTimeout(
@@ -55,13 +67,15 @@ export class PlayerComponent implements OnInit {
         //Them ham` hien thi vao day tuy ae nhe
         console.log("Timeout" + this.audio.currentTime)
         this.nextTrack()
-
       }, this.audio.duration*1000 - this.audio.currentTime*1000
     )
   }
 
   pauseTrack() {
+    this.tempTime = 0;
+    clearTimeout(this.timeout);
     this.audio.pause();
+    console.log("pause");
     this.playing = false;
   }
 
@@ -80,7 +94,6 @@ export class PlayerComponent implements OnInit {
     this.currentTrack = this.list[this.trackIndex];
     this.audio.src = this.currentTrack.songUrl;
     this.audio.load();
-
     setTimeout(  () => {this.playTrack()}, 3000)
   }
 
@@ -95,7 +108,6 @@ export class PlayerComponent implements OnInit {
     this.audio.load();
     this.playTrack();
   }
-
 
   setVolume(vol) {
     this.audio.volume = vol;
@@ -143,11 +155,15 @@ export class PlayerComponent implements OnInit {
     }
   }
 
-  setTime(time: number) {
-    setTimeout(() => {
-      //Them ham` hien thi vao day tuy ae nhe
-      this.pauseTrack();
-      console.log("timeout")
-    }, time);
-  }
+  // setTime(time: number) {
+  //   this.pauseTrack();
+  //   this.playTrack();
+  //   setTimeout(() => {
+  //     //Them ham` hien thi vao day tuy ae nhe
+  //     clearTimeout(this.timeout)
+  //     this.pauseTrack();
+  //     alert("Ban da nghe xong " + time/1000 + " phut")
+  //     console.log("timeout")
+  //   }, time);
+  // }
 }
