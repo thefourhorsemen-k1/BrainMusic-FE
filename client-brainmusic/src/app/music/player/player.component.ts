@@ -48,13 +48,13 @@ export class PlayerComponent implements OnInit {
   }
 
 
-  autoNext() {
+  autoNext(){
     setTimeout(
       () => {
         //Them ham` hien thi vao day tuy ae nhe
         console.log("Timeout" + this.audio.currentTime)
         this.nextTrack()
-      }, this.audio.duration * 1000 - this.audio.currentTime * 1000
+      }, this.audio.duration*1000 - this.audio.currentTime*1000
     )
   }
 
