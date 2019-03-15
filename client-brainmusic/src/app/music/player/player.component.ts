@@ -14,8 +14,6 @@ export class PlayerComponent implements OnInit {
 
   formData: Music;
   list: Music[];
-  tempTime: number = 0;
-  timeAlert: boolean = false;
 
   constructor(
     private service: MusiclistService
@@ -28,8 +26,9 @@ export class PlayerComponent implements OnInit {
   private playing = false;
   private trackIndex = 0;
   private track: Music[] = this.service.list;
-  private currentTrack: Music
+  private currentTrack: Music;
   private timeout;
+
 
 
 
@@ -40,10 +39,11 @@ export class PlayerComponent implements OnInit {
     this.autoNext()
     this.timeout = setTimeout(() => {
       this.pauseTrack();
-      alert("Ban hay nghi ngoi 5 phut truoc khi nghe tiep")
       console.log("timeout");
-      this.timeAlert = true;
-    }, 2500000);
+      if (confirm('Ban da nghe 25 phut, ban co muon nghe tiep hay khong?')) {
+       this.playTrack();
+      }
+    }, 5000);
 
   }
 
@@ -139,12 +139,13 @@ export class PlayerComponent implements OnInit {
 
   setPlayTime(time: number) {
     this.pauseTrack();
-    this.playTrack();
+    this.audio.play();
     setTimeout(() => {
       //Them ham` hien thi vao day tuy ae nhe
-      clearTimeout(this.timeout);
       this.pauseTrack();
-      alert("Ban da nghe xong " + time / 1000 + " phut")
+      if (confirm('Ban da nghe ' + time/60/1000  +' phut, ban co muon nghe tiep hay khong?')) {
+        this.setPlayTime(time);
+      }
       console.log("timeout")
     }, time);
   }
