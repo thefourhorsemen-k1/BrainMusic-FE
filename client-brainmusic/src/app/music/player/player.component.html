@@ -1,9 +1,3 @@
-<!--<div class="background">-->
-<!--<video autoplay loop oncanplay="this.muted=true">-->
-<!--<source src="/assets/video/background.mp4" type="video/mp4">-->
-<!--</video>-->
-
-
 <div class="player-background">
   <div class="icon text-center">
     <a><i class="fas fa-headphones"></i> I want listen to</a>
@@ -61,29 +55,20 @@
     </div>
   </div>
 </div>
+
 <!--<mat-nav-list *ngFor="let track of list">-->
 <!--<a mat-list-item-->
 <!--[class.selected]="track === currentTrack"-->
 <!--(click)="setTrack(track)">{{track.name}}</a>-->
 <!--</mat-nav-list>-->
+<div class="play-music">
+  <p>Audioplayer</p>
+  Playing: {{currentTrack.name}}
+  Category: {{currentTrack.category}}
 
-<p>Audioplayer</p>
-Playing: {{currentTrack.name}}
-Category: {{currentTrack.category}}
-
-<!--<div id="sliders">-->
-<!--Progress:-->
-<!--<mat-slider id="currentTime"-->
-<!--min="0"-->
-<!--max="{{audio.duration}}"-->
-<!--step="0.001"-->
-<!--value="{{audio.currentTime}}"-->
-<!--(change)="setProgress($event.value)">-->
-<!--</mat-slider>-->
-<!--</div>-->
-<span class="player-icon">
-  <button mat-button id="play" (click)="stopTrack()"><i class="fas fa-play fa-3x"></i></button>
-  <button mat-button id="pause" (click)="stopTrack()"><i class="fas fa-pause fa-3x"></i></button>
+  <span class="player-icon">
+  <button mat-button id="play" (click)="playTrack()"><i class="fas fa-play fa-3x"></i></button>
+  <button mat-button id="pause" (click)="pauseTrack()"><i class="fas fa-pause fa-3x"></i></button>
   <button mat-button id="stop" (click)="stopTrack()"><i class="far fa-stop-circle fa-3x"></i></button>
   <button mat-button id="next" (click)="nextTrack()"><i class="fas fa-step-forward fa-3x"></i></button>
   <button mat-button id="previous" (click)="previousTrack()"><i class="fas fa-step-backward fa-3x "></i></button>
@@ -98,4 +83,5 @@ Category: {{currentTrack.category}}
       (change)="setVolume($event.value)">
     </mat-slider>
 </span>
+</div>
 
