@@ -1,8 +1,14 @@
 .container{
+  position: relative;
   margin-bottom: 10em;
   margin-top: 5em;
 }
 
+bd-example {
+  position: relative;
+  color: black;
+  font-weight: bolder;
+}
 .navbar {
   background: rgba(0, 0, 0, 0.3) !important;
   font-size: 20px !important;
@@ -21,3 +27,26 @@
   border-color: transparent;
 }
 
+.button {
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  width: 0;
+  height: 74px;
+  border-color: transparent transparent transparent rgba(204, 102, 255, 0.7)
+;
+  transition: 100ms all ease;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 37px 0 37px 60px;
+}
+.button.paused {
+  border-style: double;
+  border-width: 0px 0 0px 60px;
+}
+.button:hover {
+  border-color: transparent transparent transparent #404040;
+}
